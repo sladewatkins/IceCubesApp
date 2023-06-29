@@ -52,7 +52,7 @@ struct AboutView: View {
           Label("settings.support.terms-of-use", systemImage: "checkmark.shield")
         }
       } footer: {
-        Text("\(versionNumber)©2023 Thomas Ricouard")
+        Text("© 2023 Thomas Ricouard")
       }
       .listRowBackground(theme.primaryBackgroundColor)
 
