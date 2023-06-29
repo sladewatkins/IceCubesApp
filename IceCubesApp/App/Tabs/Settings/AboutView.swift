@@ -39,7 +39,11 @@ struct AboutView: View {
             .cornerRadius(4)
           Spacer()
         }
-
+          
+        Link(destination: URL(string: "https://github.com/Dimillian/IceCubesApp/releases/tag/1.6.16")!) {
+          Label("settings.section.app.footer \(versionNumber)", systemImage: "arrow.up.circle")
+          }
+          
         Link(destination: URL(string: "https://github.com/Dimillian/IceCubesApp/blob/main/PRIVACY.MD")!) {
           Label("settings.support.privacy-policy", systemImage: "lock")
         }
