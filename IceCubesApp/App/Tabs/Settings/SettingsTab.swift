@@ -148,13 +148,15 @@ struct SettingsTabs: View {
       NavigationLink(destination: TranslationSettingsView()) {
         Label("settings.general.translate", systemImage: "captions.bubble")
       }
-      Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
-        Label("settings.system", systemImage: "gear")
-      }
+        // chore: System Settings URL does not work on visionOS
+        Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
+            Label("settings.system", systemImage: "gear")
+        }
       .tint(theme.labelColor)
     }
     .listRowBackground(theme.primaryBackgroundColor)
   }
+    
 
   private var otherSections: some View {
     Section("settings.section.other") {
